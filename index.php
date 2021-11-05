@@ -213,7 +213,7 @@
             <h3 class="resume-title">Experience</h3>
             <div class="resume-item">
               <h4>PT. Nusa Rizki Persada</h4>
-              <h5>Maret 2016 - Present</h5>
+              <h5>Maret 2016 - Oktober 2021</h5>
               <p><em>Web Developer</em></p>
               <ul>
                 <li>Updating, develop and maintenance a website.</li>
