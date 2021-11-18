@@ -161,6 +161,14 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
               <center>
+                <img src="assets/img/skills/phpmyadmin.png" class="img-fluid" alt="">
+              </center>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <center>
                 <img src="assets/img/skills/sql_server.png" class="img-fluid" alt="">
               </center>
             </div>
