@@ -48,7 +48,7 @@
                 <ul>
                   <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> Diploma</li>
                   <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> zakiifauzan@gmail.com</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>City:</strong> Depok, Indonesia</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>City:</strong> Jakarta, Indonesia</li>
                 </ul>
               </div>
             </div>
