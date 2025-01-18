@@ -39,7 +39,7 @@
               <div class="col-lg-6">
                 <ul>
                   <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> 3 Maret 1994</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> 29</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> 30</li>
                   <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> +6289654659488</li>
                   <li><i class="icofont-rounded-right"></i> <strong>Half-time:</strong> Available</li>
                 </ul>
