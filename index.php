@@ -225,15 +225,7 @@
             </div> -->
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Experience</h3>
-            <div class="resume-item">
-              <h4>PT. Nusa Rizki Persada</h4>
-              <h5>Maret 2016 - Oktober 2021</h5>
-              <p><em>Web Developer</em></p>
-              <ul>
-                <li>Updating, develop and maintenance a website.</li>
-              </ul>
-            </div>
+            <!-- <h3 class="resume-title">Experience</h3> -->
             <!-- <div class="resume-item">
               <h4>Graphic design specialist</h4>
               <h5>2017 - 2018</h5>
@@ -245,7 +237,6 @@
                 <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
               </ul>
             </div> -->
-          </div>
         </div>
 
       </div>
@@ -271,54 +262,6 @@
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/mis.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/baak.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/dosen.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/dosen2.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/keu.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/pmb_admin.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/pmb_online.png" class="img-fluid" alt="">
-            </div>
-          </div>
-          
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/siskamaya.png" class="img-fluid" alt="">
-            </div>
-          </div>
           
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
