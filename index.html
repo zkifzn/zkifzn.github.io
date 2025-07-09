@@ -454,12 +454,20 @@
     // Tombol tutup
     closeBtn.onclick = function () {
       popup.classList.remove("show");
+
+      // Bersihkan posisi yang sebelumnya di-set di desktop
+      popup.style.top = "";
+      popup.style.left = "";
     };
   
     // Klik luar = tutup popup
     window.onclick = function (event) {
       if (!popup.contains(event.target) && !event.target.classList.contains("popup-trigger")) {
         popup.classList.remove("show");
+
+        // Bersihkan posisi yang sebelumnya di-set di desktop
+        popup.style.top = "";
+        popup.style.left = "";
       }
     };
   </script>
