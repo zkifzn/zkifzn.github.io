@@ -430,7 +430,20 @@
     const popupImg = document.getElementById("popupImage");
     const closeBtn = document.getElementById("closeBtn");
     const triggers = document.querySelectorAll(".popup-trigger");
-  
+
+    function hidePopup() {
+      // Tambahkan efek keluar
+      popup.classList.add("hiding");
+    
+      // Tunggu sampai animasi selesai (300ms), baru hapus semua class
+      setTimeout(() => {
+        popup.classList.remove("show", "hiding");
+        popup.style.top = "";
+        popup.style.left = "";
+        popupImg.src = "";
+      }, 300);
+    }
+    
     triggers.forEach(img => {
       img.addEventListener("click", () => {
         // Deteksi jika mobile, jangan tampilkan popup
@@ -451,24 +464,14 @@
         }
       });
     });
-  
-    // Tombol tutup
-    closeBtn.onclick = function () {
-      popup.classList.remove("show");
 
-      // Bersihkan posisi yang sebelumnya di-set di desktop
-      popup.style.top = "";
-      popup.style.left = "";
-    };
-  
-    // Klik luar = tutup popup
+    // Tutup lewat tombol
+    closeBtn.onclick = hidePopup;
+    
+    // Tutup saat klik luar popup
     window.onclick = function (event) {
       if (!popup.contains(event.target) && !event.target.classList.contains("popup-trigger")) {
-        popup.classList.remove("show");
-
-        // Bersihkan posisi yang sebelumnya di-set di desktop
-        popup.style.top = "";
-        popup.style.left = "";
+        hidePopup();
       }
     };
   </script>
