@@ -432,29 +432,35 @@
   
     triggers.forEach(img => {
       img.addEventListener("click", () => {
-        // Ambil posisi gambar yang diklik
-        const rect = img.getBoundingClientRect();
-        const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
-  
-        // Tampilkan gambar yang diklik ke popup
+        // Tampilkan gambar yang diklik
         popupImg.src = img.src;
   
-        // Tempatkan popup tepat di bawah gambar
-        popup.style.top = (scrollTop + 500) + "px";
-        popup.style.left = (scrollLeft + 1000) + "px";
+        // Deteksi apakah tampilan mobile
+        if (window.innerWidth <= 600) {
+          // Untuk mobile: biarkan posisi diatur lewat CSS media query
+          popup.style.top = "";
+          popup.style.left = "";
+        } else {
+          // Untuk desktop: atur posisi popup dekat gambar
+          const rect = img.getBoundingClientRect();
+          const scrollTop = window.scrollY || document.documentElement.scrollTop;
+          const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+  
+          popup.style.top = (scrollTop + rect.bottom + 10) + "px";
+          popup.style.left = (scrollLeft + rect.left) + "px";
+        }
   
         // Tampilkan popup
         popup.classList.add("show");
       });
     });
   
-    // Tutup popup
+    // Tombol tutup
     closeBtn.onclick = function () {
       popup.classList.remove("show");
     };
   
-    // Tutup jika klik di luar popup
+    // Klik luar = tutup popup
     window.onclick = function (event) {
       if (!popup.contains(event.target) && !event.target.classList.contains("popup-trigger")) {
         popup.classList.remove("show");
