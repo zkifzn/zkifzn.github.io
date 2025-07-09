@@ -90,6 +90,35 @@
     .close:hover {
       color: #fff;
     }
+
+    /* ==== Responsive untuk Mobile ==== */
+    @media (max-width: 600px) {
+      body {
+        margin: 20px;
+      }
+
+      .thumbnail {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .popup {
+        width: 90%;
+        left: 5% !important;
+        top: auto !important;
+        bottom: 20px;
+        transform: scale(1) !important;
+      }
+
+      .popup.show {
+        transform: scale(1.05) !important;
+      }
+
+      .close {
+        top: 8px;
+        right: 10px;
+      }
+    }
   </style>
   
   <!-- ======= Mobile nav toggle button ======= -->
