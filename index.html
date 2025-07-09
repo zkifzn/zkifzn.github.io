@@ -389,6 +389,12 @@
       </div>
     </section><!-- End Portfolio Section -->
 
+    <!-- Popup -->
+    <div id="popupCard" class="popup">
+      <span class="close" id="closeBtn">&times;</span>
+      <img id="popupImage" src="" alt="Popup Besar">
+    </div>
+    
   </main><!-- End #main -->
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
@@ -409,6 +415,33 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <script>
+    const popup = document.getElementById("popupCard");
+    const popupImg = document.getElementById("popupImage");
+    const closeBtn = document.getElementById("closeBtn");
+    const triggers = document.querySelectorAll(".popup-trigger");
+  
+    // Untuk semua gambar
+    triggers.forEach(img => {
+      img.addEventListener("click", () => {
+        popupImg.src = img.src;
+        popup.classList.add("show");
+      });
+    });
+  
+    // Tombol tutup
+    closeBtn.onclick = function () {
+      popup.classList.remove("show");
+    };
+  
+    // Tutup saat klik di luar
+    window.onclick = function (event) {
+      if (!popup.contains(event.target) && !event.target.classList.contains("popup-trigger")) {
+        popup.classList.remove("show");
+      }
+    };
+  </script>
+  
 </body>
 
 </html>
