@@ -425,20 +425,31 @@
     const closeBtn = document.getElementById("closeBtn");
     const triggers = document.querySelectorAll(".popup-trigger");
   
-    // Untuk semua gambar
     triggers.forEach(img => {
       img.addEventListener("click", () => {
+        // Ambil posisi gambar yang diklik
+        const rect = img.getBoundingClientRect();
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+  
+        // Tampilkan gambar yang diklik ke popup
         popupImg.src = img.src;
+  
+        // Tempatkan popup tepat di bawah gambar
+        popup.style.top = (rect.bottom + scrollTop + 10) + "px";
+        popup.style.left = (rect.left + scrollLeft) + "px";
+  
+        // Tampilkan popup
         popup.classList.add("show");
       });
     });
   
-    // Tombol tutup
+    // Tutup popup
     closeBtn.onclick = function () {
       popup.classList.remove("show");
     };
   
-    // Tutup saat klik di luar
+    // Tutup jika klik di luar popup
     window.onclick = function (event) {
       if (!popup.contains(event.target) && !event.target.classList.contains("popup-trigger")) {
         popup.classList.remove("show");
