@@ -432,16 +432,21 @@
     const triggers = document.querySelectorAll(".popup-trigger");
 
     function hidePopup() {
-      // Tambahkan efek keluar
+      // Aktifkan animasi keluar (tapi tunggu satu frame dulu agar CSS apply dulu)
       popup.classList.add("hiding");
     
-      // Tunggu sampai animasi selesai (300ms), baru hapus semua class
-      setTimeout(() => {
-        popup.classList.remove("show", "hiding");
-        popup.style.top = "";
-        popup.style.left = "";
-        popupImg.src = "";
-      }, 300);
+      requestAnimationFrame(() => {
+        // Hilangkan .show di frame berikutnya agar animasi smooth
+        popup.classList.remove("show");
+    
+        // Setelah animasi selesai, bersihkan semuanya
+        setTimeout(() => {
+          popup.classList.remove("hiding");
+          popup.style.top = "";
+          popup.style.left = "";
+          popupImg.src = "";
+        }, 150); // harus sama dengan CSS transition-duration
+      });
     }
     
     triggers.forEach(img => {
