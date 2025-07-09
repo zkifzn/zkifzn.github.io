@@ -432,25 +432,21 @@
   
     triggers.forEach(img => {
       img.addEventListener("click", () => {
-        // Tampilkan gambar yang diklik
-        popupImg.src = img.src;
-  
-        // Deteksi apakah tampilan mobile
+        // Deteksi jika mobile, jangan tampilkan popup
         if (window.innerWidth <= 600) {
-          // Untuk mobile: biarkan posisi diatur lewat CSS media query
-          popup.style.top = "";
-          popup.style.left = "";
-        } else {
-          // Untuk desktop: atur posisi popup dekat gambar
-          const rect = img.getBoundingClientRect();
-          const scrollTop = window.scrollY || document.documentElement.scrollTop;
-          const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
-  
-          popup.style.top = (scrollTop + 500) + "px";
-          popup.style.left = (scrollLeft + 1000) + "px";
+          return; // Tidak melakukan apa-apa di mobile
         }
-  
-        // Tampilkan popup
+    
+        // Untuk desktop: tampilkan gambar
+        popupImg.src = img.src;
+    
+        const rect = img.getBoundingClientRect();
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+    
+        popup.style.top = (scrollTop + 500) + "px";
+        popup.style.left = (scrollLeft + 1000) + "px";
+    
         popup.classList.add("show");
       });
     });
