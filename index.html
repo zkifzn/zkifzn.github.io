@@ -1,7 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -35,7 +34,7 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-  
+
 <body>
 
   <style>
@@ -94,11 +93,9 @@
     }
 
     /* ==== Responsive untuk Mobile ==== */
-    @media (max-width: 600px) {
-      
-    }
+    @media (max-width: 600px) {}
   </style>
-  
+
   <!-- ======= Mobile nav toggle button ======= -->
   <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
 
@@ -127,7 +124,7 @@
       <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
 
     </div>
-  </header><!-- End Header --> 
+  </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
@@ -236,7 +233,7 @@
         </div>
 
         <div class="row skills-container" data-aos="fade-up" data-aos-delay="100">
-          
+
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
               <center>
@@ -268,7 +265,7 @@
               </center>
             </div>
           </div>
-          
+
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
               <center>
@@ -298,11 +295,11 @@
               </center>
             </div>
           </div>
-          
+
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             &nbsp;
           </div>
-          
+
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
               <center>
@@ -310,7 +307,7 @@
               </center>
             </div>
           </div>
-          
+
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             &nbsp;
           </div>
@@ -339,36 +336,36 @@
           </div>
         </div>
 
-        
-        
+
+
         <!-- class="portfolio-wrap" -->
-        
+
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-          
+
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="">
               <img src="assets/img/portfolio/SAS_login.png" class="img-fluid thumbnail popup-trigger" alt="">
             </div>
           </div>
-          
+
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="">
               <img src="assets/img/portfolio/SAS_pertemuan.png" class="img-fluid thumbnail popup-trigger" alt="">
             </div>
           </div>
-          
+
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="">
               <img src="assets/img/portfolio/jsonPortfolio.png" class="img-fluid thumbnail popup-trigger" alt="">
             </div>
           </div>
-          
+
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="">
               <img src="assets/img/portfolio/invoice.png" class="img-fluid thumbnail popup-trigger" alt="">
             </div>
           </div>
-          
+
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="">
               <img src="assets/img/portfolio/IMG_4712.jpeg" class="img-fluid thumbnail popup-trigger" alt="">
@@ -386,13 +383,13 @@
       </div>
 
       <!-- Popup -->
-        <div id="popupCard" class="popup">
-          <span class="close" id="closeBtn">&times;</span>
-          <img id="popupImage" src="" alt="Popup Besar">
-        </div>
-      
+      <div id="popupCard" class="popup">
+        <span class="close" id="closeBtn">&times;</span>
+        <img id="popupImage" src="" alt="Popup Besar">
+      </div>
+
     </section><!-- End Portfolio Section -->
-    
+
   </main><!-- End #main -->
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
@@ -425,11 +422,11 @@
     function hidePopup() {
       // Aktifkan animasi keluar (tapi tunggu satu frame dulu agar CSS apply dulu)
       popup.classList.add("hiding");
-    
+
       requestAnimationFrame(() => {
         // Hilangkan .show di frame berikutnya agar animasi smooth
         popup.classList.remove("show");
-    
+
         // Setelah animasi selesai, bersihkan semuanya
         setTimeout(() => {
           popup.classList.remove("hiding");
@@ -439,26 +436,26 @@
         }, 150);
       });
     }
-    
+
     triggers.forEach(img => {
       img.addEventListener("click", () => {
         // Deteksi jika mobile, jangan tampilkan popup
         if (window.innerWidth <= 600) {
           return; // Tidak melakukan apa-apa di mobile
-        }else{
+        } else {
           // Untuk desktop: tampilkan gambar
           popupImg.src = img.src;
-      
+
           // const rect = img.getBoundingClientRect();
           // const scrollTop = window.scrollY || document.documentElement.scrollTop;
           // const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
-          
+
           popup.style.top = "500px";
-          popup.style.left = "1000px";
+          popup.style.left = "700px";
 
           // popup.style.top = (scrollTop + 500) + "px";
           // popup.style.left = (scrollLeft + 1000) + "px";
-      
+
           popup.classList.add("show");
         }
       });
@@ -466,21 +463,24 @@
 
     // Tutup lewat tombol
     closeBtn.onclick = hidePopup;
-    
+
     // Tutup saat klik luar popup
-    window.onclick = function (event) {
+    window.onclick = function(event) {
       if (!popup.contains(event.target) && !event.target.classList.contains("popup-trigger")) {
         hidePopup();
       }
     };
 
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
-  
+
     gtag('config', 'G-RPM6TFCTEY');
   </script>
-  
+
 </body>
 
 </html>
